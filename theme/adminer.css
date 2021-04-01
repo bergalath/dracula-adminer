@@ -246,7 +246,7 @@ p code+a:visited:hover {
     padding-top: 50px;
 }
 
-#content>p {
+#content>p:first-child {
     margin-bottom: 15px;
     color: var(--color-darkForeground);
 }
