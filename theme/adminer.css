@@ -395,7 +395,7 @@ p code+a:visited:hover {
 
 #tables a[title] {
     float: none;
-    display: block;
+    display: inline-block;
 }
 
 .rtl #tables a:first-child,
