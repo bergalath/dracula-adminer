@@ -191,11 +191,11 @@ fieldset select {
 fieldset input[type=button],
 fieldset input[type=submit],
 fieldset p {
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
 }
 
 fieldset div p {
-    margin-top: 10px;
+    /*margin-top: 10px;*/
 }
 
 legend {
@@ -521,10 +521,8 @@ input[type=button] {
     background: var(--color-darkGreen);
     color: var(--color-darkBackground);
     font-weight: bold;
-    margin-bottom: 5px;
     transition: background .4s ease;
     border-radius: 5px;
-    margin-top: 20px;
 }
 
 input[type=submit][disabled],
@@ -562,7 +560,6 @@ input.default {
 
 select {
     box-sizing: border-box;
-    margin: 0;
     padding: 6px 0;
     border: 1px solid var(--color-darkCurrentLine);
     background-color: var(--color-darkBackground);
@@ -618,27 +615,14 @@ label {
 
 #lang {
     position: fixed;
-    top: 55px;
-    right: 100%;
     z-index: 10;
-    margin-right: -340px;
-    line-height: normal;
-    padding: 0;
-    left: auto;
-    font-size: 0;
 }
 
 #lang select {
-    font-size: 12px;
     padding: 0;
     text-align: right;
-    border: 0;
     background: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     cursor: pointer;
-    outline: 0;
 }
 
 #lang select option {
