@@ -6,10 +6,10 @@
 
     docker-compose up --build
 
-open your browser :
+Open your browser (`username: postgres / password: password`) :
 
-+ http://localhost:880 (`username: postgres / password: password`)
-+ http://localhost:888 (`username: postgres / password: password`)
++ [upstream version (without fixes) — http://localhost:880](http://localhost:880)
++ [with fixes — http://localhost:888](http://localhost:888)
 
 <details><summary>SQL script to generate some tables</summary>
   <code><pre>
