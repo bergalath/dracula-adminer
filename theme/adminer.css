@@ -188,16 +188,6 @@ fieldset select {
     margin-right: 5px;
 }
 
-fieldset input[type=button],
-fieldset input[type=submit],
-fieldset p {
-    /*margin-bottom: 0;*/
-}
-
-fieldset div p {
-    /*margin-top: 10px;*/
-}
-
 legend {
     display: inline-block;
     padding: 6px 15px;
