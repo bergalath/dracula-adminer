@@ -251,7 +251,7 @@ p code+a:visited:hover {
 
 #menu {
     width: 350px;
-    border-right: 1px solid var(--color-darkDraculaSite);
+    border-right: 1px solid var(--color-darkComment);
     margin: 0;
     top: 0;
     background: var(--color-darkDraculaVSCode);
@@ -282,15 +282,15 @@ p code+a:visited:hover {
 
 #menu p,
 #tables {
-    border: 1px solid var(--color-darkForeground);
+    border-bottom: 1px solid var(--color-darkComment);
     border-top: 0;
 }
 
 #menu #dbs {
     background: var(--color-darkDraculaVSCode);
     padding: 0 15px 15px;
-    border-top: 0;
-    border: 1px solid var(--color-darkForeground);
+    border-top: 1px solid var(--color-darkComment);
+    border-bottom: 1px solid var(--color-darkComment);
     box-sizing: border-box;
     color: var(--color-darkCyan);
 }
