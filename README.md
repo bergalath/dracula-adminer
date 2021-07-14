@@ -1,21 +1,25 @@
-# Dracula for [Adminer](https://www.adminer.org/)
+# adminer-dracula
 
-> A dark theme for [Adminer](https://www.adminer.org/).
+Build the [Docker image](https://hub.docker.com/r/bergalath/adminer-dracula) for [Adminer](https://github.com/vrana/adminer) with [dracula theme](https://github.com/dracula/adminer) and [some fixes](https://github.com/bergalath/dracula-adminer-theme), waiting for [this issue to be closed](https://github.com/dracula/adminer/issues/1#issuecomment-809944711) to maybe propose those upstream one day …
 
-![Screenshot](./screenshot.png)
+## How to use the image
 
-## Install
+**in terminal :**
 
-All instructions can be found at [draculatheme.com/adminer](https://draculatheme.com/adminer).
+```bash
+env ADMINER_DESIGN=dracula docker run --rm bergalath/adminer-dracula:4.8.1
+```
 
-## Team
+open your browser : http://localhost:8080 (`username: postgres / password: password`)
 
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/adminer/graphs/contributors).
+**in docker-compose file :** (see [./docker-compose.yml](docker-compose.yml))
 
-|[![Douglas Damasio](https://avatars1.githubusercontent.com/u/57931045?s=70&u=c24a9ea2ba77986b905813280b3b87c15acc1f9b&v=4)](https://github.com/douglasdamasio) |
-|--- |
-|[Douglas Damasio](https://github.com/douglasdamasio) |
-
-## License
-
-[MIT License](./LICENSE)
+```yaml
+  adminer:
+    image: bergalath/adminer-dracula:4.8.1
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    environment:
+      - ADMINER_DESIGN=dracula
+```

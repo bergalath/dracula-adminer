@@ -31,3 +31,17 @@ $$
 ```
   </md>
 </details>
+
+## How to update the image to [Docker Hub](https://hub.docker.com/r/bergalath/adminer-dracula)
+
+1. Update the version
+
+    ```bash
+    sed -i 's/4.6.5/4.6.6/' *
+    ```
+
+1. Then push it
+
+    ```bash
+    ./push
+    ```
