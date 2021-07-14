@@ -38,6 +38,7 @@ services:
       - pg_data:/var/lib/postgresql/data
       - pg_socket:/var/run/postgresql
     environment:
+      DATABASE_URL: postgresql://postgres:password@db:5432
       ADMINER_DESIGN: dracula
       ADMINER_PLUGINS: tables-filter
       ADMINER_DEFAULT_USER: postgres
