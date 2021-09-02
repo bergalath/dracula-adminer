@@ -11,8 +11,8 @@ services:
       POSTGRES_DB: dracula-theme
     restart: unless-stopped
 
-  adminer:
-    image: adminer:4.8.0
+  adminer-classic:
+    image: adminer:4.8.1
     depends_on:
       - db
     ports:
