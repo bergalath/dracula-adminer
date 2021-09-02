@@ -2,11 +2,19 @@ Personal fixes for [dracula theme](https://github.com/dracula/adminer), waiting 
 
 ### How to test those fixes
 
+## How to use/test the image
+
+1. Build the image
+
+        make build
+
+1. Have a look at it
+
+        make run
+
 **in terminal :**
 
-```bash
-docker-compose up --build
-```
+        make up
 
 Open your browser (`username: postgres / password: password`) :
 
@@ -32,7 +40,7 @@ $$
   </md>
 </details>
 
-## How to update the image to [Docker Hub](https://hub.docker.com/r/bergalath/adminer-dracula)
+## How to update, build and push the image to [Docker Hub](https://hub.docker.com/r/bergalath/adminer-dracula)
 
 1. Update the version
 
@@ -40,8 +48,20 @@ $$
     sed -i 's/4.6.5/4.6.6/' *
     ```
 
+1. Build the image
+
+    ```bash
+    make build
+    ```
+
+1. Have a look at it
+
+    ```bash
+    make run
+    ```
+
 1. Then push it
 
     ```bash
-    ./push
+    make push
     ```

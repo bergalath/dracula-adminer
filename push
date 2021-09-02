@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-VERSION=4.8.1-2
-
-git commit -m "Update to v$VERSION"
-git tag $VERSION
-git push origin --tags
-git push origin
