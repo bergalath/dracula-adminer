@@ -18,6 +18,7 @@ push: ## Push the image to docker hub
 	git push origin
 	git push origin --tags
 	docker push bergalath/adminer-dracula:$(VERSION)
+	docker pushrm bergalath/adminer-dracula
 
 help:
 	grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
