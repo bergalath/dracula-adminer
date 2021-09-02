@@ -12,7 +12,7 @@ env ADMINER_DESIGN=dracula docker run --rm bergalath/adminer-dracula:4.8.1-3
 
 open your browser : http://localhost:8080 (`username: postgres / password: password`)
 
-**in docker-compose file :** (see [./docker-compose.yml](docker-compose.yml))
+**in docker-compose file :** (see [./docker-compose.yml](https://github.com/bergalath/dracula-adminer-theme/blob/main/docker-compose.yml))
 
 ```yaml
   adminer:
