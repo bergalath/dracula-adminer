@@ -7,7 +7,7 @@ Build a [Docker image](https://hub.docker.com/r/bergalath/adminer-dracula) of [A
 - **in terminal :**
 
     ```bash
-    env ADMINER_DESIGN=dracula docker run --rm bergalath/adminer-dracula:4.8.1-3
+    env ADMINER_DESIGN=dracula docker run --rm bergalath/adminer-dracula:4.8.1-4
     ```
 
     open your browser : http://localhost:8080 (`username: postgres / password: password`)
@@ -16,7 +16,7 @@ Build a [Docker image](https://hub.docker.com/r/bergalath/adminer-dracula) of [A
 
     ```yaml
       adminer:
-        image: bergalath/adminer-dracula:4.8.1-3
+        image: bergalath/adminer-dracula:4.8.1-4
         restart: unless-stopped
         ports:
           - 8080:8080

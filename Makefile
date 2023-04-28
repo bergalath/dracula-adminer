@@ -1,7 +1,7 @@
 
 .SILENT: # do not echo commands as we run them.
 
-VERSION := 4.8.1-3
+VERSION := 4.8.1-4
 
 build: ## Build the image
 	docker build --no-cache --pull -t bergalath/adminer-dracula:$(VERSION) .
@@ -14,7 +14,7 @@ run: ## Launch a shell in the container
 
 push: ## Push the image to docker hub
 	git commit -a -m 'Update to version $(VERSION)'
-	git tag $(VERSION)
+	git tag $(VERSION) -m 'Update to version $(VERSION)'
 	git push origin
 	git push origin --tags
 	docker push bergalath/adminer-dracula:$(VERSION)
