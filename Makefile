@@ -10,7 +10,7 @@ up: ## Run the image with a pg image
 	docker-compose up
 
 run: ## Launch a shell in the container
-	docker run --rm -it --entrypoint sh bergalath/adminer-dracula:$(VERSION)
+	docker run --rm -it --entrypoint bash bergalath/adminer-dracula:$(VERSION)
 
 push: ## Push the image to docker hub
 	git commit -a -m 'Update to version $(VERSION)'

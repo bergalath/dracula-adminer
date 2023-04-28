@@ -8,7 +8,6 @@ ADD --chown=adminer:adminer \
 
 USER root
 
-RUN sed -i '/.*this->getTrUsername.*/d' plugins/login-servers-enhanced.php && \
-    sed -i '/.*this->getTrPassword.*/d' plugins/login-servers-enhanced.php
+RUN sed -i -E '/.*this->getTr(Password|Username).*/d' plugins/login-servers-enhanced.php
 
 USER adminer

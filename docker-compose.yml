@@ -1,29 +1,22 @@
+---
 services:
-
-  db:
-    image: postgres:13.1-alpine
-    volumes:
-      - pg_data:/var/lib/postgresql/data
-      - pg_socket:/var/run/postgresql
+  pgdb:
+    image: postgres:15.2-alpine
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_HOST_AUTH_METHOD: trust
       POSTGRES_DB: dracula-theme
     restart: unless-stopped
 
   adminer-classic:
     image: adminer:4.8.1
     depends_on:
-      - db
+      - pgdb
     ports:
       - 880:8080
-    volumes:
-      - pg_socket:/var/run/postgresql
     environment:
       ADMINER_DESIGN: dracula
-      ADMINER_PLUGINS: tables-filter
-      ADMINER_DEFAULT_USER: postgres
-      ADMINER_DEFAULT_SERVER: postgresql:///var/run/postgresql
+      ADMINER_PLUGINS: 'tables-filter tinymce dump-alter edit-calendar edit-foreign enum-option enum-types'
+      ADMINER_DEFAULT_SERVER: pgdb
     restart: unless-stopped
 
   adminer-dracula:
@@ -31,19 +24,15 @@ services:
     build:
       context: ./
     depends_on:
-      - db
+      - pgdb
     ports:
       - 888:8080
-    volumes:
-      - pg_data:/var/lib/postgresql/data
-      - pg_socket:/var/run/postgresql
     environment:
       ADMINER_DESIGN: dracula
-      ADMINER_PLUGINS: tables-filter
-      ADMINER_DEFAULT_USER: postgres
-      ADMINER_DEFAULT_SERVER: postgresql:///var/run/postgresql
+      ADMINER_PLUGINS: 'tables-filter tinymce dump-alter edit-calendar edit-foreign enum-option enum-types'
+      ADMINER_DEFAULT_SERVER: pgdb
     restart: unless-stopped
 
-volumes:
-  pg_data:
-  pg_socket:
+networks:
+  default:
+    name: dracula-network
